@@ -1,7 +1,5 @@
-import { Heading } from "@lmiguelm-ui/react";
+import { Heading } from '@lmiguelm-ui/react'
 
 export default function Home() {
-  return (
-    <Heading as="h1">Hello world</Heading>
-  )
+  return <Heading as="h1">Hello world</Heading>
 }
