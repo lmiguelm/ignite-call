@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@lmiguelm-ui/react':
-    specifier: ^1.0.1
-    version: 1.0.1(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.0.2
+    version: 1.0.2(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
   '@types/node':
     specifier: 20.10.5
     version: 20.10.5
@@ -26,6 +26,9 @@ dependencies:
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+  phosphor-react:
+    specifier: ^1.4.1
+    version: 1.4.1(react@18.2.0)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -103,8 +106,8 @@ packages:
   /@humanwhocodes/object-schema@2.0.1:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
 
-  /@lmiguelm-ui/react@1.0.1(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-7n4AJ1crkAmHldb/FbZYBrdPrai11TReodBU0lvK51XOLjTLUaZoNYdcikmlGQ5Hh2otT0EdEfwAComx99cxzw==}
+  /@lmiguelm-ui/react@1.0.2(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-nWEEkcFbg9AE2/8+NJ6UQeJTyD87/TX3uFglXE+81fWbrdFyhWK0JtZf1goSjMNGL8ZEhGBPxGH6QbzXLV05ew==}
     dependencies:
       '@radix-ui/react-avatar': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-checkbox': 1.0.4(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
