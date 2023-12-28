@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import NextAuth from 'next-auth'
-import GoogleProvider from 'next-auth/providers/google'
+import GoogleProvider, { GoogleProfile } from 'next-auth/providers/google'
 
 import { PrismaAdapter } from '../../../lib/auth/prisma-adapter'
 
@@ -17,6 +17,15 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
               'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/calendar',
           },
         },
+        profile: (profile: GoogleProfile) => {
+          return {
+            id: profile.sub,
+            email: profile.email,
+            name: profile.name,
+            username: '',
+            avatar_url: profile.picture,
+          }
+        },
       }),
     ],
     callbacks: {
@@ -28,6 +37,12 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
         }
 
         return true
+      },
+      session: async ({ session, user }) => {
+        return {
+          ...session,
+          user,
+        }
       },
     },
   })
