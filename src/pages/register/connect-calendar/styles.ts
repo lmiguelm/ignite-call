@@ -1,4 +1,4 @@
-import { Box, styled } from '@lmiguelm-ui/react'
+import { Box, Text, styled } from '@lmiguelm-ui/react'
 
 export const ConnectBox = styled(Box, {
   marginTop: '$6',
@@ -20,4 +20,9 @@ export const ConnectItemWrapper = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '$2',
+})
+
+export const AuthError = styled(Text, {
+  color: '#f75a86',
+  marginBottom: '$4',
 })
