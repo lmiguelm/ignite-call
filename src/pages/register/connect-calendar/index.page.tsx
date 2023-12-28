@@ -1,10 +1,20 @@
 import { Button, Heading, MultiStep, Text } from '@lmiguelm-ui/react'
 import { ArrowRight, Calendar, SignIn } from 'phosphor-react'
 
+import { signIn } from 'next-auth/react'
+
 import { Container, Header } from '../styles'
 import { ConnectBox, ConnectItem, ConnectItemWrapper } from './styles'
 
 export default function Register() {
+  async function handleSignIn() {
+    try {
+      await signIn('google')
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <Container>
       <Header>
@@ -25,7 +35,7 @@ export default function Register() {
             <Text>Google Calendar</Text>
           </ConnectItemWrapper>
 
-          <Button variant="secondary" size="sm">
+          <Button variant="secondary" size="sm" onClick={handleSignIn}>
             Conectar <SignIn />
           </Button>
         </ConnectItem>
