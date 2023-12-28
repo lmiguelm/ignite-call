@@ -13,7 +13,7 @@ import {
   ConnectItemWrapper,
 } from './styles'
 
-export default function Register() {
+export default function ConnectCalendar() {
   const { status } = useSession()
 
   const isConnected = status === 'authenticated'
